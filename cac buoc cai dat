@@ -53,7 +53,9 @@ Dán đoạn mã này vào code đầu tiên của file server.ts
           });
 
 
-
+9) Compile/Test the Server Locally (test trên máy chủ cục bộ)
+    npm run build:ssr  (build ứng dụng tạo ra  file dist)
+    npm run serve:ssr  (chạy ứng dụng localhost4000:/)
 
 
 
