@@ -1,0 +1,59 @@
+1) Cài đặt Angular Meterial : ng add @angular/material
+2) Cài đặt Boostrap ngb: npm i bootstrap@4.5.0 (chọn version phù hợp với angular 11)
+                       : ng add @ng-bootstrap/ng-bootstrap@9.x.x
+  Nhớ ném đường dẫn css, js vào file node_modules
+          ng-bootstrap    	Angular	    Bootstrap CSS
+          7.x.x, 8.x.x	    10.0.0	    4.5.0
+          9.x.x           	11.0.0	    4.5.0
+          10.x.x	          12.0.0	    4.5.0
+          11.x.x	          13.0.0	    4.6.0
+          12.0.0-beta.x	    13.0.0    	5.0.0
+
+3) Phân trang : 	npm install ngx-pagination --save
+4) Carousel:     npm i ngx-owl-carousel-o@5.1.0   
+5) Firebase: 
+            Angular	      Firebase	    AngularFire
+            13	          9	            ^7.2
+            12	          9	            ^7.0
+            12	          7,8	          ^6.1.5
+            11	          7,8	          ^6.1
+            10	          8	            ^6.0.4
+            10	          7	            ^6.0.3
+            9	            8	            ^6.0.4
+            9	            7	            ^6.0
+
+         install firebase : npm i firebase@8 
+         install angularfire: npm install firebase @angular/fire@6.1
+         
+6) Editor: npm i @kolkov/angular-editor@1
+7) Emailjs: 	npm install emailjs-com --save
+
+8)	ng add @nguniversal/express-engine --clientProject myapp
+      myapp là tên project của bạn.
+
+Ko sử dụng Jquery cho project, (nó méo chạy được universal)
+
+Sau khi chạy xong có thể gặp lỗi liên quan đến window is not defined (nếu sử dụng window)
+Dán đoạn mã này vào code đầu tiên của file server.ts
+
+          (global as any).WebSocket = require('ws');
+          (global as any).XMLHttpRequest = require('xhr2');
+          const MockBrowser = require('mock-browser').mocks.MockBrowser;
+          const mock = new MockBrowser();
+
+          global.document = mock.getDocument();
+          global.window = mock.getWindow();
+          Object.defineProperty(window.document.body.style, 'transform', {
+            value: () => {
+              return {
+                enumerable: true,
+                configurable: true
+              };
+            },
+          });
+
+
+
+
+
+
