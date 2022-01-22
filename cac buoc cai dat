@@ -68,3 +68,33 @@ Dán đoạn mã này vào code đầu tiên của file server.ts
 
   BrowserModule.withServerTransition({appId: 'appname'}),
 
+10) Sau khi các bước 8 9 không được thì ta sử dụng tiếp cách này.
+    Ở file angular.json ta tìm đến outputPath: đổi tên name project --> functions
+    Chạy lệnh npm run build:ssr
+    Ở file server.ts thêm đoạn mã sau: 
+      const websiteFileLocation = environment.production? "browser" : "dist/functions/browser";
+      const distFolder = join(process.cwd(), websiteFileLocation );
+    Chạy lệnh: npm run dev:ssr
+    Chạy lệnh npm run build:ssr 
+    cd dist -> firebase init -> chọn functions, hosting
+    thư mục public direction: functions
+    copy file dependencies ở package.json:
+      dán vào dependencies ở file dist package.json
+    cd functions --> npm i
+    vào file index.js 
+            const functions = require("firebase-functions");
+            const mainjs = require(__dirname + "/server/main");
+            exports.ngssr = functions.https.onRequest(mainjs.app());
+     Vào file firebase.json dán đoạn mã này.
+                  "rewrites": [
+                {
+                  "source": "**",
+                  "function": "ngssr"
+                }
+                ]
+                
+    Chạy lệnh:  firebase emulators:start
+    cmd file dist: firebase deploy --only hosting,functions
+      
+     
+    
