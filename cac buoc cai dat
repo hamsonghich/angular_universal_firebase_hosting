@@ -33,6 +33,7 @@
 
          install firebase : npm i firebase@8 
          install angularfire: npm install firebase @angular/fire@6.1
+                              npm install -g firebase-tools
          
 6) Editor: npm install @kolkov/angular-editor@1 --save
 7) Emailjs: 	npm install emailjs-com --save
