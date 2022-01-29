@@ -96,6 +96,17 @@ Dán đoạn mã này vào code đầu tiên của file server.ts
                 
     Chạy lệnh:  firebase emulators:start
     cmd file dist: firebase deploy --only hosting,functions
-      
-     
     
+    
+    
+    
+    
+    ng add @angular/material
+    ng add @ng-bootstrap/ng-bootstrap@9
+    npm install ngx-pagination --save
+    npm install ngx-owl-carousel-o@5.1.0   
+    npm i firebase@8 
+    npm install firebase @angular/fire@6.1
+    npm install -g firebase-tools
+    npm install @kolkov/angular-editor@1 --save
+    npm install emailjs-com --save
