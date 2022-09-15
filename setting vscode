@@ -1,0 +1,49 @@
+{
+    "html.suggest.html5": true,
+    "scss.suggestVariables": true,
+    "scss.completion.completePropertyWithSemicolon": true,
+    "scss.format.braceStyle": "collapse",
+    "scss.format.enable": true,
+    "workbench.colorTheme": "One Dark Pro",
+    "editor.scrollbar.scrollByPage": true,
+    "editor.smoothScrolling": true,
+    "editor.fontLigatures": false,
+    "editor.lineHeight": 19,
+    "editor.fontSize": 10,
+    // "workbench.iconTheme": "webstorm-icons",
+    "editor.fontFamily": "JetBrains Mono",
+    "editor.fontWeight": "350",
+    "editor.wordWrap": "on",
+    "editor.formatOnType": true,
+    "editor.formatOnPaste": true,
+    "editor.mouseWheelZoom": true,
+    "editor.tabCompletion": "on",
+    "terminal.integrated.fontSize": 10,
+    "settingsSync.ignoredSettings": [
+
+    ],
+    "workbench.colorCustomizations": {
+            "sideBar.background":"#0e1118",
+            "sideBar.foreground": "#b1acac",
+            "editor.background": "#0e1118",
+            "editor.foreground": "#d1cccc",
+    },
+    "settingsSync.ignoredExtensions": [
+
+    
+    ],
+    "editor.semanticTokenColorCustomizations": {
+
+
+    
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "files.autoSave": "afterDelay",
+    "workbench.settings.openDefaultSettings": true
+}
